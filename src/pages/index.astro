@@ -1,11 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Greeting from "../components/Greeting";
+import Counter from "../components/Counter";
+import CounterIsland from "../components/CounterIsland";
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
+    <CounterIsland client:load />
     <h1>Welcome to <span class="text-gradient">My Astro Site</span></h1>
     <Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there"]} />
+    <Counter client:load />
   </main>
 </Layout>
